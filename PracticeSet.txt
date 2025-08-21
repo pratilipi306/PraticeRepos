@@ -1,0 +1,109 @@
+Perfect timing 🚀 — building **small projects in TypeScript** will give you a real grip on the language beyond syntax.
+Here’s a list of **practice projects** (beginner → advanced), all small enough to finish in a few hours each.
+
+---
+
+## 🔹 **Beginner Projects (Console-based)**
+
+1. **Calculator CLI**
+
+   * Input: two numbers + operator (+, -, \*, /).
+   * Output: result.
+   * Practice: Type annotations, conditionals, functions.
+
+2. **To-Do List (Console App)**
+
+   * Add, remove, list tasks.
+   * Practice: Arrays, interfaces, enums.
+
+3. **Guess the Number Game**
+
+   * Random number generated (1–100).
+   * User keeps guessing until correct.
+   * Practice: Loops, conditionals, type narrowing.
+
+4. **Word Counter**
+
+   * Input: a sentence.
+   * Output: word count, character count.
+   * Practice: String/array methods.
+
+---
+
+## 🔹 **Intermediate Projects (Browser or Node.js)**
+
+5. **Contact Book**
+
+   * Store contacts `{name, phone, email}`.
+   * Add, search, delete.
+   * Practice: Interfaces, classes, generics.
+
+6. **Expense Tracker**
+
+   * Track expenses with categories.
+   * Show total and per-category sum.
+   * Practice: Arrays, objects, enums.
+
+7. **Weather App (API-based)**
+
+   * Fetch current weather using [OpenWeather API](https://openweathermap.org/api).
+   * Display temperature, description, location.
+   * Practice: `fetch`, async/await, types for API responses.
+
+8. **GitHub Profile Viewer**
+
+   * Input: GitHub username.
+   * Output: name, avatar, repo count.
+   * Practice: API calls, optional chaining, interfaces.
+
+---
+
+## 🔹 **Advanced Small Projects**
+
+9. **Quiz App**
+
+   * Multiple choice questions.
+   * Track score.
+   * Practice: Strong typing with arrays of objects.
+
+10. **Chat App (Mock)**
+
+* Simple UI for sending/receiving messages.
+* No backend, just local state.
+* Practice: TypeScript with React or Vue.
+
+11. **Notes App**
+
+* Add, delete, edit notes.
+* Store in `localStorage`.
+* Practice: TypeScript + DOM APIs.
+
+12. **Task Manager with Drag & Drop**
+
+* Columns: “Todo”, “In Progress”, “Done”.
+* Drag tasks between columns.
+* Practice: DOM types, event handling.
+
+---
+
+## 🔹 **Extra Challenge**
+
+13. **Banking System (Console or UI)**
+
+* Class `Account` with deposit/withdraw methods.
+* Track multiple accounts.
+* Practice: Classes, inheritance, access modifiers.
+
+14. **Library Management**
+
+* Add books, issue books, return books.
+* Practice: Interfaces + classes.
+
+---
+
+⚡ Tip:
+Start with **console-based projects** (no HTML/React), then move to **API-based or browser-based projects** once you’re comfortable.
+
+---
+
+👉 Do you want me to **pick one beginner project (like Calculator or To-Do List)** and write the full **TypeScript implementation** for you so you can use it as a template?
