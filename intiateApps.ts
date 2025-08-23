@@ -2,7 +2,7 @@ import {calcCLI} from "./calculatorCLI";
 import {toDoList} from "./toDoList"
 import * as readline from 'readline-sync';
 
-
+// Chcek if u can use optional chaining here?
 const calcSelection = readline.question("do u want to invoke the calculator function?Y/N: ");
 
 (calcSelection==="Y")? calcCLI():console.log("calculator is not selected by user...");
