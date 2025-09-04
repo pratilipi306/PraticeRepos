@@ -1,4 +1,6 @@
-const books = [
+import { profile } from "console";
+
+const booksObj = [
   {
     title: 'Algorithms',
     author: ['Robert Sedgewick', 'Kevin Wayne'],
@@ -182,105 +184,93 @@ const books = [
   }
 ];
 
-//Destructure the books array into two variables called firstBook and secondBook.
-const [firstBook, secondBook] = books;
-//Destructure the books array into a variable called thirdBook. You must skip the first two books.
+// Destructure the first book object from the books array into variables called title, author and ISBN.
 
-const [,,thirdBook] = books
-//console.log(thirdBook);
+const { title, author, ISBN } = booksObj[0];
+// console.log(title);
+// console.log(author);
+// console.log(ISBN);
 
-// Below is the nested ratings array that contains two other arrays.
-//  Destructure the nested ratings arrays into two variables called rating and ratingsCount. 
-//  In the result of your destructuring, the ratings variable should store a number 4.19,
-//  and the ratingsCount variable should store a number 144584.
+// Each book object has the keywords property. 
+// Destructure the first book object from the books array into a variable called tags. 
+// The tags variable should be assigned with the value of the keywords property.
 
-const ratings = [['rating', 4.19], ['ratingsCount', 144584]];
+const { keywords: tags } = booksObj[0];
 
-const [[,rating1], [,ratingsCount]] = ratings;
-    // console.log(rating);
-    // console.log(ratingsCount);
+// console.log(tags);
 
-// Below is the ratingStars array. 
-// Destructure it into three variables called fiveStarRatings, oneStarRatings and threeStarRatings. 
-// Assign the threeStarRatings variable with a default value of 0.
+// The seventh book from the books array is missing the programmingLanguage property. 
+// Destructure the seventh book object (books[6]) into variables called language and programmingLanguage. 
+// Assign the programmingLanguage variable with a default value of 'unknown'.
+const { language, programmingLanguage = "unknown" } = booksObj[6];
+// console.log(language);
+// console.log(programmingLanguage);
 
-const ratingStars = [63405, 1808];
-const [fiveStarRatings,oneStarRatings, threeStarRatings=0 ] = ratingStars; 
-//Extract the first two colors and store the rest in another array called otherColors:
-const colors = ["red", "blue", "green", "yellow", "purple"];
-const [firstColour, secondColour, ...otherColors] = colors;
-    // console.log(firstColour);
-    // console.log(secondColour);
-    // console.log(otherColors);
-// Swap the values of two variables using array destructuring (no temporary variable allowed):
-let a = 1;
-let b = 2;
+// Below are two variables called bookTitle and bookAuthor. 
+// Reassign them with the values of the title and author properties 
+// of the first book object from the books array
 
-[a,b]= [b,a];
-      // console.log (a);
-      // console.log(b);
+let bookTitle: string = 'unknown';
+let bookAuthor: string | string[] = [];
+({ title: bookTitle, author: bookAuthor } = booksObj[0]);
 
-// Extract the second element of the array (skip the first) into a variable called secondFruit:
-const fruits = ["apple", "banana", "cherry", "mango"];
-const[ ,secondFruit] = fruits;
-//console.log(secondFruit);
-// From the array below, extract only the last element into a variable called lastAnimal:
-const animals = ["dog", "cat", "elephant", "lion"];
-const[, , , lastAnimal ] = animals;
-console.log(lastAnimal);
-//Destructure the array into four variables, but give default values for missing ones:
-const letters = ["A", "B"];
-const [a1 ,b1 ,c="NA", d="NA"]=letters;
+// Destructure the first book object from the books array into a 
+// variable called bookRating. In the result of your destructuring,
+// the bookRating variable should be assigned with the value of the book[0].thirdParty.goodreads.rating property.
 
-//You have nested arrays. Extract "banana" and "orange":
-const nested = ["apple", ["banana", "orange"], "grapes"];
+// Please do most of the work on the left side of the assignment operator: const ... = books[0];
+let bookRating: number;
 
-const [ ,midFruits, ] = nested;
-//console.log(midFruits);
+({ thirdParty: { goodreads: { rating: bookRating } } } = booksObj[0]);
 
-// You are given:
-// const students = ["Alice", "Bob", "Charlie", "David", "Eve"];
-// Extract the first two students as group1 (array)
-// The remaining as group2 (array)
+// Write a function called printBookInfo that has three parameters called title, 
+// author and year. This function should work for a single object passed as an argument, 
+// and it should log to the console information about the book in this format: "${title} by ${author}, ${year}".
 
-const students = ["Alice", "Bob", "Charlie", "David", "Eve"];
-const [ group1, group2 ] = [students.slice(0, 2), students.slice(2)];
-//Given:
-// const coords = [12, 34, [56, 78]];
-// Extract x = 12, y = 34, z = 56, w = 78.
-const coords: [number, number, [number, number]] = [12, 34, [56, 78]];
-const [x, y, [z, w]] = coords;
-//console.log([z, w]);
+// If year is undefined (was not passed), it should be assigned with a default value of 'year unknown'.
 
-// You have:
-// const user = ["John", "Doe", ["john@example.com", "doe@example.com"]];
-// Extract firstName, lastName, and store both emails in emails.
+function printBookInfo(booksObj: any) {
+  //const { title, author } = booksObj[0];
+  //console.log(`${title} by ${author}`);
+  const { title, author, year = "unknown" } = booksObj[0];
+  //console.log(`${title} by ${author}, ${year}`);
 
-const user = ["John", "Doe", ["john@example.com", "doe@example.com"]];
-
-const [firstName,lastName,emails ] = user;
-//console.log(firstName,lastName,emails);
-
-
-//Destructure a function return value:Extract the first two scores into math and science.
-function getScores() {
-  return [90, 80, 70, 60];
 }
-const [Math1,science] = getScores()
-console.log(Math1,science);
+//printBookInfo(booksObj);
+// Extract username and email into separate variables.
+const userDetails = { id: 101, profile: { username: "coder123", email: "test@example.com" } };
 
+const { username, email } = userDetails.profile;
+//console.log(`${username}, ${email}`);
 
+// Extract theme and sms.
+const settings = { theme: "dark", language: "en", notifications: { email: true, sms: false } };
+const { theme, notifications:{sms:sms}  } = settings;
+//console.log(`${theme}, ${sms}`);
 
+// Destructure so that title is stored in bookTitle, and the rest of the properties go into another object called info.
+const book = { title: "JS Guide", author: "John", pages: 300 };
 
+const {title:bookTitleO, ...info} = book;
+const {author:authorO, pages} = info;
+// console.log(`${bookTitleO}, ${authorO}, ${pages}`);
 
+// Extract name from department and also role.
+const employee = { id: 1, department: { name: "IT", location: "NY" }, role: "Engineer" };
 
+const { department:{name:name},role:Role}  = employee;
+// console.log(`${name}, ${Role}`);
 
+//Extract the name of the first item.
+const order = { orderId: 555, items: [{ name: "Laptop", price: 1200 }, { name: "Mouse", price: 25 }] };
 
+const {items:[{name:nameO}]} = order;
+// console.log(nameO);
+// Extract host and password.
+const config = { port: 8080, db: { host: "localhost", user: "admin", password: "secret" } };
 
-
-
-
-
+const {db:{host:host}, db:{password:password} }= config;
+// console.log(`${host}, ${password}`);
 
 
 
