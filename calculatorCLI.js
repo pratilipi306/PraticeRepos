@@ -2,9 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.calcCLI = calcCLI;
 var readline = require("readline-sync");
+//  **Calculator CLI**
+//    * Input: two numbers + operator (+, -, \*, /).
+//    * Output: result.
+//    * Practice: Type annotations, conditionals, functions.
 function calcCLI() {
-    // const number1: number = Number(readline.question("Enter first number : "));
-    // const number2: number = Number(readline.question("Enter second number : "));
     var select = readline.question("Select your operation : add, sub, division, mulitplication: ");
     switch (select) {
         case "add":
@@ -33,7 +35,7 @@ function calcCLI() {
                 numbers.push(Number(readline.question("Enter your number : ")));
                 count--;
             }
-            console.log("addition of the numebrs are", mulitplication.apply(void 0, numbers));
+            console.log("mulitplication of the numebrs are", mulitplication.apply(void 0, numbers));
             break;
         default:
             console.log("no opeartion is allowed to calculate");
@@ -59,7 +61,7 @@ function mulitplication() {
     for (var _i = 0; _i < arguments.length; _i++) {
         numbers[_i] = arguments[_i];
     }
-    // const numebrsToMultiply: number[] = numbers;
+    // used the numbers recieved in the rest paramtere without assigning them in an aray first;
     var multiResult = 1;
     for (var _a = 0, numbers_1 = numbers; _a < numbers_1.length; _a++) {
         var n = numbers_1[_a];
