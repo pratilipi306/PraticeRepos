@@ -1,0 +1,84 @@
+Got it 👍 — you want **TypeScript coding practice programs** that are commonly asked in **SDET (Software Development Engineer in Test) interviews**.
+I’ll give you a set of problems categorized by **core concepts** (arrays, strings, objects, promises, OOP, testing focus).
+I’ll only give you **questions**, not solutions, so you can practice.
+
+---
+
+## 🔹 **TypeScript Programs for SDET Interview**
+
+### 1. **Arrays & Iteration**
+
+1. Write a function to remove duplicates from an array of numbers.
+2. Find the second largest element in an array.
+3. Rotate an array `k` times to the right.
+4. Merge two sorted arrays into one sorted array.
+5. Implement a function that checks if two arrays are equal (same elements, same order).
+
+---
+
+### 2. **Strings**
+
+6. Reverse a string without using built-in methods.
+7. Check if a string is a palindrome.
+8. Count the number of vowels and consonants in a string.
+9. Find the first non-repeating character in a string.
+10. Write a function to check if two strings are anagrams.
+
+---
+
+### 3. **Objects & Maps**
+
+11. Given an object, write a function to check if a property exists.
+12. Deep clone an object in TypeScript.
+13. Convert an array of objects into a map by a given key.
+14. Count the frequency of words in a sentence and return as an object.
+15. Compare two objects for deep equality.
+
+---
+
+### 4. **Functions & TypeScript Features**
+
+16. Write a generic function `identity<T>(arg: T): T`.
+17. Create an interface for a `User` and write a function that accepts only that type.
+18. Implement function overloading in TypeScript.
+19. Write a function using **union types** that accepts either a string or number.
+20. Demonstrate **type narrowing** with `typeof` or `in` operator.
+
+---
+
+### 5. **Promises & Async**
+
+21. Write a function that resolves a promise after 2 seconds.
+22. Implement a retry mechanism for a function that may fail (max 3 retries).
+23. Use `Promise.all` to fetch data from multiple sources.
+24. Create a function that simulates an API call with `async/await`.
+25. Implement a function to race multiple promises and return the first one that resolves.
+
+---
+
+### 6. **Testing-Focused Programs**
+
+26. Write a function that validates email addresses using regex.
+27. Implement a function that checks password strength (min length, special char, number).
+28. Write a function that returns true if a given JSON string is valid.
+29. Implement a function to flatten a nested array `[1, [2, [3, 4]], 5] → [1,2,3,4,5]`.
+30. Write a function that mocks an API response for testing.
+
+---
+
+### 7. **OOP in TypeScript**
+
+31. Create a `Shape` interface and implement `Circle` and `Rectangle` classes.
+32. Demonstrate inheritance with a `Person` and `Employee` class.
+33. Implement an abstract class with at least one abstract method.
+34. Show an example of method overriding in TypeScript.
+35. Use **access modifiers** (`public`, `private`, `protected`) in a class example.
+
+---
+
+🔥 Pro tip: In SDET interviews, they often combine **logic + TypeScript feature + testability**. For example:
+_"Write a function to find duplicates in an array and then write Jest test cases for it."_
+
+---
+
+Would you like me to also prepare a **set of real interview-style coding challenges** (with constraints, input/output examples) — so you can practice them in a timed way, like in HackerRank or Codility?
