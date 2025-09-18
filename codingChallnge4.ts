@@ -55,3 +55,46 @@ dogs.forEach((value) => {
 });
 console.log(`ownersEatTooLittle ${ownersEatTooLittle}`);
 console.log(`ownersEatTooMuch ${ownersEatTooMuch}`);
+
+// 4. Log a string to the console for each array created in 3., like this: "Matilda and
+//    Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat
+//    too little!"
+
+console.log(` ${ownersEatTooLittle}'s dogs eat too much!`);
+console.log(` ${ownersEatTooMuch}'s dogs eat too little!`);
+
+// 5. Log to the console whether there is any dog eating exactly the amount of food
+//    that is recommended (just true or false)
+
+dogs.forEach((value) => {
+  value.curFood === value.recommendedFood
+    ? console.log("true")
+    : console.log("false");
+});
+
+// 6. Log to the console whether there is any dog eating an okay amount of food
+//    (just true or false)
+// 7. Create an array containing the dogs that are eating an okay amount of food (try
+//    to reuse the condition used in 6.)
+//current > (recommended _ 0.90) && current < (recommended _
+//  1.10)
+const dogEatOk: string[] = [];
+dogs.forEach((value) => {
+  const recFood = value.recommendedFood || 0;
+  recFood * 0.9 < value.curFood && value.curFood < recFood * 1.1
+    ? console.log(`${value.owners}'s dog is eating OK amount of food`)
+    : console.log(`${value.owners}'s dog is not eating OK amount of food`);
+});
+
+dogs.forEach((value) => {
+  const recFood = value.recommendedFood || 0;
+  recFood * 0.9 < value.curFood && value.curFood < recFood * 1.1
+    ? dogEatOk.push(...value.owners)
+    : {};
+});
+
+console.log(...dogEatOk);
+
+// 8. Create a shallow copy of the 'dogs' array and sort it by recommended food
+//    portion in an ascending order (keep in mind that the portions are inside the
+//    array's objects 😉)
